@@ -12,18 +12,15 @@ public class BandeauThread extends Thread {
 
     @Override
     public void run() {
-        synchronized(bandeau){
-            for(ScenarioElement element : scenario.getmyElements()){
-                for (int repeats = 0; repeats < element.repeats; repeats++) {
-                    element.effect.playOn(bandeau);
-                }       
-    
+        synchronized (bandeau) {
+            // for (ScenarioElement element : scenario.getmyElements()) {
+            // for (int repeats = 0; repeats < element.repeats; repeats++) {
+            scenario.playOn(bandeau);
+            // }
+
         }
     }
-    this.run();
-}
-
-
+    // }
 
     /*
      * public void playOn(Bandeau b) {
