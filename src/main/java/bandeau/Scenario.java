@@ -19,7 +19,7 @@ class ScenarioElement {
  * Un scenario mémorise une liste d'effets, et le nombre de repetitions pour chaque effet
  * Un scenario sait se jouer sur un bandeau.
  */
-public class Scenario {
+public class Scenario{
 
     private final List<ScenarioElement> myElements = new LinkedList<>();
 
@@ -44,5 +44,9 @@ public class Scenario {
                 element.effect.playOn(b);
             }
         }
+    }
+
+    public List<ScenarioElement> getmyElements(){
+        return myElements;
     }
 }
